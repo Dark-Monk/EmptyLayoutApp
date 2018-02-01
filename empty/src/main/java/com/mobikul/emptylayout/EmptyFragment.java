@@ -147,9 +147,9 @@ public class EmptyFragment extends Fragment {
         TO SHOW THE FRAGMENT
      ------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-    public EmptyFragment show(Activity activity) {
+    public EmptyFragment show(Activity activity, int view) {
         FragmentTransaction fragmentTransaction = ((FragmentActivity) activity).getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(android.R.id.content, this, EmptyFragment.class.getSimpleName());
+        fragmentTransaction.replace(view, this, EmptyFragment.class.getSimpleName());
         fragmentTransaction.addToBackStack(EmptyFragment.class.getSimpleName());
         fragmentTransaction.commit();
         return this;

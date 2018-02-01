@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.vedeshkumar.emptylayouttestapp.MainActivity">
 
+    <LinearLayout
+        android:id="@+id/testing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:orientation="horizontal" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
