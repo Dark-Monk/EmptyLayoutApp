@@ -1,3 +1,11 @@
+# Empty Layout
+
+A library to show Empty layouts no the pages where you want show some collection but the collection does not contain any items.
+
+:star:  `build support version used : 26.0.2 `
+
+:star:  `Data Binding is not used`
+
 new EmptyFragment()
                 .setImageDrawableId(R.drawable.my_image)
                 .setTitleText("Your Cart Is Empty")
