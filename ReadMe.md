@@ -16,8 +16,6 @@ Add this line in your `module level build.gradle` file
 
 # Usage Examples
 
-1) To show over `android.R.id.content` view
-
 *       new EmptyFragment()
                         .setImageDrawableId(R.drawable.my_image)
                         .setTitleText("Your Cart Is Empty")
@@ -31,8 +29,6 @@ Add this line in your `module level build.gradle` file
                         })
                         .show(this);
                         
-2) To show over a particular view
-
 *       new EmptyFragment()
                                 .setImageDrawableId(R.drawable.my_image)
                                 .setTitleText("Your Cart Is Empty")
