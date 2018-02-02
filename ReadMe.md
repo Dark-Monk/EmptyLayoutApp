@@ -6,14 +6,6 @@ A library to show Empty layouts no the pages where you want show some collection
 
 :star:  `Data Binding is not used`
 
-# Importing Istructions
-
-Add this line in your `module level build.gradle` file
-
-```
-  compile 'com.webkul.mobikul:customtoast:1.0.0'
-```
-
 # Usage Examples
 
 *       new EmptyFragment()
