@@ -20,6 +20,9 @@ import android.widget.TextView;
 
 public class EmptyFragment extends Fragment {
 
+    /* Settings*/
+    private boolean mAddToBackStack = false;
+
     /* Main layout background color*/
     private int mBackgroundColor;
 
@@ -33,7 +36,7 @@ public class EmptyFragment extends Fragment {
     private float mTitleTextSize;
     private int mTitleTextColor;
 
-    /* Some content which will be displayed below the title */
+    /* Content which will be displayed below the title */
     private String mContentText;
     private float mContentTextSize;
     private int mContentTextColor;
@@ -148,18 +151,24 @@ public class EmptyFragment extends Fragment {
      ------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     public EmptyFragment show(Activity activity) {
-        return show(activity, 0);
+        return show(activity, android.R.id.content);
     }
 
     public EmptyFragment show(Activity activity, int view) {
         FragmentTransaction fragmentTransaction = ((FragmentActivity) activity).getSupportFragmentManager().beginTransaction();
-        if (view == 0) {
-            fragmentTransaction.replace(android.R.id.content, this, EmptyFragment.class.getSimpleName());
-        } else {
-            fragmentTransaction.replace(view, this, EmptyFragment.class.getSimpleName());
-        }
-        fragmentTransaction.addToBackStack(EmptyFragment.class.getSimpleName());
+        fragmentTransaction.replace(view, this, EmptyFragment.class.getSimpleName());
+        if (mAddToBackStack)
+            fragmentTransaction.addToBackStack(EmptyFragment.class.getSimpleName());
         fragmentTransaction.commit();
+        return this;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------
+        TO GET A PARTICULAR VIEW
+     ------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    public EmptyFragment setAddToBackStack(boolean addToBackStack) {
+        mAddToBackStack = addToBackStack;
         return this;
     }
 

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTitleText("Your Cart Is Empty")
                 .setContentText("Add some product to your cart and view them here")
                 .setButtonText("Continue Shopping")
+                .setAddToBackStack(true)
                 .setButtonOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
